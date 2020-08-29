@@ -1,0 +1,47 @@
+E:\ASP MVC\Common\bin\Debug\Common.dll
+E:\ASP MVC\Common\bin\Debug\Common.pdb
+E:\ASP MVC\Common\obj\Debug\Common.dll
+E:\ASP MVC\Common\obj\Debug\Common.pdb
+E:\ASP MVC DA\Common\bin\Debug\Common.dll
+E:\ASP MVC DA\Common\bin\Debug\Common.pdb
+E:\ASP MVC DA\Common\obj\Debug\Common.dll
+E:\ASP MVC DA\Common\obj\Debug\Common.pdb
+E:\ASP MVC DA\Common\obj\Debug\Common.csprojAssemblyReference.cache
+E:\ASP MVC DA\Common\bin\Debug\System.Configuration.ConfigurationManager.dll
+E:\ASP MVC DA\Common\bin\Debug\System.Security.AccessControl.dll
+E:\ASP MVC DA\Common\bin\Debug\System.Security.Permissions.dll
+E:\ASP MVC DA\Common\bin\Debug\System.Security.Principal.Windows.dll
+E:\ASP MVC DA\Common\bin\Debug\System.Configuration.ConfigurationManager.xml
+E:\ASP MVC DA\Common\bin\Debug\System.Security.AccessControl.xml
+E:\ASP MVC DA\Common\bin\Debug\System.Security.Permissions.xml
+E:\ASP MVC DA\Common\bin\Debug\System.Security.Principal.Windows.xml
+E:\ASP MVC DA\Common\obj\Debug\Common.csproj.CopyComplete
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Common\bin\Debug\Common.dll
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Common\bin\Debug\Common.pdb
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Common\bin\Debug\System.Configuration.ConfigurationManager.dll
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Common\bin\Debug\System.Security.AccessControl.dll
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Common\bin\Debug\System.Security.Permissions.dll
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Common\bin\Debug\System.Security.Principal.Windows.dll
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Common\bin\Debug\System.Configuration.ConfigurationManager.xml
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Common\bin\Debug\System.Security.AccessControl.xml
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Common\bin\Debug\System.Security.Permissions.xml
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Common\bin\Debug\System.Security.Principal.Windows.xml
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Common\obj\Debug\Common.csprojAssemblyReference.cache
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Common\obj\Debug\Common.csproj.CopyComplete
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Common\obj\Debug\Common.dll
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Common\obj\Debug\Common.pdb
+D:\ASP MVC\Database\ASP MVC DA\Common\bin\Debug\Common.dll
+D:\ASP MVC\Database\ASP MVC DA\Common\bin\Debug\Common.pdb
+D:\ASP MVC\Database\ASP MVC DA\Common\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\ASP MVC\Database\ASP MVC DA\Common\bin\Debug\System.Security.AccessControl.dll
+D:\ASP MVC\Database\ASP MVC DA\Common\bin\Debug\System.Security.Permissions.dll
+D:\ASP MVC\Database\ASP MVC DA\Common\bin\Debug\System.Security.Principal.Windows.dll
+D:\ASP MVC\Database\ASP MVC DA\Common\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\ASP MVC\Database\ASP MVC DA\Common\bin\Debug\System.Security.AccessControl.xml
+D:\ASP MVC\Database\ASP MVC DA\Common\bin\Debug\System.Security.Permissions.xml
+D:\ASP MVC\Database\ASP MVC DA\Common\bin\Debug\System.Security.Principal.Windows.xml
+D:\ASP MVC\Database\ASP MVC DA\Common\obj\Debug\Common.csprojAssemblyReference.cache
+D:\ASP MVC\Database\ASP MVC DA\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+D:\ASP MVC\Database\ASP MVC DA\Common\obj\Debug\Common.csproj.CopyComplete
+D:\ASP MVC\Database\ASP MVC DA\Common\obj\Debug\Common.dll
+D:\ASP MVC\Database\ASP MVC DA\Common\obj\Debug\Common.pdb

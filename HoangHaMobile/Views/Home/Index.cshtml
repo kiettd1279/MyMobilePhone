@@ -1,0 +1,307 @@
+﻿@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var slides = (List<Model.EF.Slide>)ViewBag.Slides;
+    var listNewProducts = (List<Model.EF.Product>)ViewBag.NewProducts;
+    var listHotProducts = (List<Model.EF.Product>)ViewBag.HotProducts;
+    var ListSell = (List<Model.EF.Product>)ViewBag.SellProducts;
+}
+<header>
+    <div class="container">
+        <div class="col-xs-12 col-sm-4 col-md-3 sidemenu-holder">
+            <!-- ================================== TOP NAVIGATION ================================== -->
+            <div class="side-menu animate-dropdown">
+                @{Html.RenderAction("ProductCategory", "Product");}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 homebanner-holder">
+            <!-- ========================================== SECTION – HERO ========================================= -->
+
+            <div id="hero">
+                <div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
+                    @foreach (var item in slides)
+                    {
+                        <div class="item">
+                            <a href="@item.Link"> <img src="@item.Image"></a>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <!-- ========================================= SECTION – HERO : END ========================================= -->
+        </div><!-- /.homebanner-holder -->
+
+    </div><!-- /.container -->
+</header>
+<!-- /.homepage2 -->
+<!-- ========================================= HOME BANNERS : END ========================================= -->
+<div id="products-tab" class="wow fadeInUp">
+    <div class="container">
+        <div class="tab-holder">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#featured" data-toggle="tab">Sản phẩm mới</a></li>
+                <li><a href="#new-arrivals" data-toggle="tab">Sản phẩm Hot</a></li>
+                <li><a href="#top-sales" data-toggle="tab">Giảm giá</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="featured">
+                    <div class="product-grid-holder">
+                        @foreach (var item in listNewProducts)
+                        {
+                            var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
+                            <div class="col-sm-4 col-md-3 no-margin product-item-holder hover">
+                                <div class="product-item">
+                                    <div class="ribbon red"><span>Mới nhập</span></div>
+                                    <div class="ribbon green"><span>Hot</span></div>
+                                    <div class="image">
+                                        <a href="@url"><img alt="@url" data-echo="@item.Image" /></a>
+                                    </div>
+                                    <div class="body">
+                                        <div class="label-discount clear"></div>
+                                        <div class="title">
+                                            <a href="@url">@item.Name</a>
+                                        </div>
+                                        <div class="brand">@item.ProductCategory.Name</div>
+                                    </div>
+                                    <div class="prices">
+                                        <div class="price-prev"></div>
+                                        <div class="price-current pull-right">@(item.Price.HasValue ? item.Price.Value.ToString("N0") : "Liên hệ") đ</div>
+                                    </div>
+                                    <div class="hover-area">
+                                        <div class="add-cart-button">
+                                            <a href="/them-gio-hang?productId=@item.ID&quantity=1" class="le-button">Thêm vào giỏ hàng</a>
+                                        </div>
+                                        <div class="wish-compare">
+                                            <a class="btn-add-to-wishlist" href="#">Yêu thích</a>
+                                            <a class="btn-add-to-compare" href="#">So Sánh</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <div class="loadmore-holder text-center">
+                        <a class="btn-loadmore" href="/san-pham">
+                            <i class="fa fa-plus"></i>
+                            Tải thêm sản phẩm
+                        </a>
+                    </div>
+                </div>
+                <div class="tab-pane" id="new-arrivals">
+                    <div class="product-grid-holder">
+                        @foreach (var item in listHotProducts)
+                        {
+                            var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
+                            <div class="col-sm-4 col-md-3 no-margin product-item-holder hover">
+                                <div class="product-item">
+                                    <div class="ribbon blue"><span>new!</span></div>
+                                    <div class="image">
+                                        <a href="@url"><img alt="@item.Name" data-echo="@item.Image" /></a>
+                                    </div>
+                                    <div class="body">
+                                        <div class="label-discount clear"></div>
+                                        <div class="title">
+                                            <a href="@url">@item.Name</a>
+                                        </div>
+                                        <div class="brand">@item.ProductCategory.Name</div>
+                                    </div>
+                                    <div class="prices">
+                                        <div class="price-prev"></div>
+                                        <div class="price-current pull-right">@(item.Price.HasValue ? item.Price.Value.ToString("N0") : "Liên hệ") đ</div>
+                                    </div>
+                                    <div class="hover-area">
+                                        <div class="add-cart-button">
+                                            <a href="/them-gio-hang?productId=@item.ID&quantity=1" class="le-button">Thêm vào giỏ hàng</a>
+                                        </div>
+                                        <div class="wish-compare">
+                                            <a class="btn-add-to-wishlist" href="#">Yêu thích</a>
+                                            <a class="btn-add-to-compare" href="#">So Sánh</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <div class="loadmore-holder text-center">
+                        <a class="btn-loadmore" href="/san-pham">
+                            <i class="fa fa-plus"></i>
+                            Tải thêm sản phẩm
+                        </a>
+                    </div>
+                </div>
+                <div class="tab-pane" id="top-sales">
+                    <div class="product-grid-holder">
+                        @foreach (var item in listHotProducts)
+                        {
+                            var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
+                            <div class="col-sm-4 col-md-3 no-margin product-item-holder hover">
+                                <div class="product-item">
+                                    <div class="ribbon blue"><span>Sale!</span></div>
+                                    <div class="image">
+                                        <a href="@url"><img alt="@url" data-echo="@item.Image" /></a>
+                                    </div>
+                                    <div class="body">
+                                        <div class="label-discount clear"></div>
+                                        <div class="title">
+                                            <a href="@url">@item.Name</a>
+                                        </div>
+                                        <div class="brand">@item.ProductCategory.Name</div>
+                                    </div>
+                                    <div class="prices">
+                                        <div class="price-prev">@(item.Price.HasValue ? item.Price.Value.ToString("N0") : "Liên hệ") đ</div>
+                                        <div class="price-current pull-right">@(item.PromotionPrice.HasValue ? item.PromotionPrice.Value.ToString("N0") : "Liên hệ")đ</div>
+                                    </div>
+                                    <div class="hover-area">
+                                        <div class="add-cart-button">
+                                            <a href="/them-gio-hang?productId=@item.ID&quantity=1" class="le-button">Thêm vào giỏ hàng</a>
+                                        </div>
+                                        <div class="wish-compare">
+                                            <a class="btn-add-to-wishlist" href="#">Yêu thích</a>
+                                            <a class="btn-add-to-compare" href="#">So Sánh</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <div class="loadmore-holder text-center">
+                        <a class="btn-loadmore" href="/san-pham">
+                            <i class="fa fa-plus"></i>
+                            Tải thêm sản phẩm
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ========================================= Bán chạy nhất ========================================= -->
+<section id="bestsellers" class="color-bg wow fadeInUp">
+    <div class="container">
+        <h1 class="section-title">Bán chạy nhất</h1>
+
+        <div class="product-grid-holder medium">
+            <div class="col-xs-12 col-md-7 no-margin">
+
+                <div class="row no-margin">
+                    @foreach (var item in ListSell)
+                    {
+                        var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
+                        <div class="col-xs-12 col-sm-4 no-margin product-item-holder size-medium hover">
+                            <div class="product-item">
+                                <div class="image">
+                                    <a href="@url"><img alt="@url" src="/assets/Client/images/blank.gif" data-echo="@item.Image" /></a>
+                                </div>
+                                <div class="body">
+                                    <div class="label-discount clear"></div>
+                                    <div class="title">
+                                        <a href="@url">@item.Name</a>
+                                    </div>
+                                    <div class="brand">@item.ProductCategory.Name</div>
+                                </div>
+                                <div class="prices">
+
+                                    <div class="price-current text-right">@(item.Price.HasValue ? item.Price.Value.ToString("N0") : "Liên hệ")đ</div>
+                                </div>
+                                <div class="hover-area">
+                                    <div class="add-cart-button">
+                                        <a href="/them-gio-hang?productId=@item.ID&quantity=1" class="le-button">Thêm vào giỏ hàng</a>
+                                    </div>
+                                    <div class="wish-compare">
+                                        <a class="btn-add-to-wishlist" href="#">Yêu thích</a>
+                                        <a class="btn-add-to-compare" href="#">So Sánh</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.product-item-holder -->
+                    }
+                </div><!-- /.row -->
+            </div><!-- /.col -->
+            <div class="col-xs-12 col-md-5 no-margin">
+                <div class="product-item-holder size-big single-product-gallery small-gallery">
+                    @foreach (var item in ListSell.Take(1))
+                    {
+                        var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
+                        <div id="best-seller-single-product-slider" class="single-product-slider owl-carousel">
+                            <div class="single-product-gallery-item" id="slide1">
+                                <a data-rel="prettyphoto" href="@url">
+                                    <img alt="@url" src="/assets/Client/images/blank.gif" data-echo="@item.Image" style="height:390px;" />
+                                </a>
+                            </div><!-- /.single-product-gallery-item -->
+                        </div><!-- /.single-product-slider -->
+
+                        <div class="body">
+                            <div class="label-discount clear"></div>
+                            <div class="title">
+                                <a href="@url">@item.Name</a>
+                            </div>
+                            <div class="brand">@item.ProductCategory.Name</div>
+                        </div>
+                        <div class="prices text-right">
+                            <div class="price-current inline">@(item.Price.HasValue ? item.Price.Value.ToString("N0") : "Liên hệ")đ</div>
+                            <a href="/them-gio-hang?productId=@item.ID&quantity=1" class="le-button big inline">Thêm vào Giỏ Hàng</a>
+                        </div>
+                    }
+                </div><!-- /.product-item-holder -->
+            </div><!-- /.col -->
+
+        </div><!-- /.product-grid-holder -->
+    </div><!-- /.container -->
+</section><!-- /#bestsellers -->
+<!-- ========================================= BEST SELLERS : END ========================================= -->
+<!-- ========================================= ĐÃ XEM GẦN ĐÂY ========================================= -->
+<section id="recently-reviewd" class="wow fadeInUp">
+    <div class="container">
+        <div class="carousel-holder hover">
+
+            <div class="title-nav">
+                <h2 class="h1">Đã xem gần đây</h2>
+                <div class="nav-holder">
+                    <a href="#prev" data-target="#owl-recently-viewed" class="slider-prev btn-prev fa fa-angle-left"></a>
+                    <a href="#next" data-target="#owl-recently-viewed" class="slider-next btn-next fa fa-angle-right"></a>
+                </div>
+            </div>
+
+            <div id="owl-recently-viewed" class="owl-carousel product-grid-holder">
+                @foreach (var item in ListSell.Take(6))
+                {
+                    var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
+
+                    <div class="no-margin carousel-item product-item-holder size-small hover">
+                        <div class="product-item">
+                            <div class="ribbon red"><span>sale</span></div>
+                            <div class="image">
+                                <a href="@url">
+                                    <img alt="@url" src="/assets/Client/images/blank.gif" data-echo="@item.Image" />
+                                </a>
+                            </div>
+                            <div class="body">
+                                <div class="title">
+                                    <a href="@url">@item.Name</a>
+                                </div>
+                                <div class="brand">@item.ProductCategory.Name</div>
+                            </div>
+                            <div class="prices">
+                                <div class="price-current text-right">@(item.Price.HasValue ? item.Price.Value.ToString("N0") : "Liên hệ") đ</div>
+                            </div>
+                            <div class="hover-area">
+                                <div class="add-cart-button">
+                                    <a href="/them-gio-hang?productId=@item.ID&quantity=1" class="le-button">Thêm vào giỏ hàng</a>
+                                </div>
+                                <div class="wish-compare">
+                                    <a class="btn-add-to-wishlist" href="#">Yêu Thích</a>
+                                    <a class="btn-add-to-compare" href="#">So Sánh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </div>
+    </div>
+</section><!--END -->

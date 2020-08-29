@@ -1,0 +1,74 @@
+﻿@model List<HoangHaMobile.Models.CartIterm>
+@{
+    ViewBag.Title = "Thanh toán";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <header>
+        <div class="container">
+            @if (Model.Count > 0)
+            {
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td style="text-align:center;">Mã sản phẩm</td>
+                            <td style="text-align:center;">Tên SP</td>
+                            <td style="text-align:center;">Ảnh SP</td>
+                            <td style="text-align:center;">Số lượng</td>
+                            <td style="text-align:center;">Đơn giá</td>
+                            <td style="text-align:center;">Thành tiền</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td style="text-align:center;">@item.Product.ID</td>
+                                <td style="text-align:center;">@item.Product.Name</td>
+                                <td style="text-align:center;"><img src="@item.Product.Image" width="60" /></td>
+                                <td style="text-align:center;">
+                                    <div class="le-quantity">
+                                        <a class="minus minus-quanlity" href=" #reduce"></a>
+                                        <input type="text" class="txtQuantity" data-id="@item.Product.ID" value="@item.Quantity" />
+                                        <a class="plus plus-quanlity" href="#add"></a>
+
+                                    </div>
+                                </td>
+                                <td style="text-align:center;">@item.Product.Price.GetValueOrDefault(0).ToString("N0") VNĐ</td>
+                                <td style="text-align:center;">@((item.Product.Price.GetValueOrDefault(0) * item.Quantity).ToString("N0")) VNĐ</td>
+                                <td><a href="#" class="close-btn" data-id="@item.Product.ID"><b>X</b></a></td>
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+            }
+            <div class="section group">
+                <div class="col-md-6">
+                    @using (Html.BeginForm("Payment", "Cart", FormMethod.Post))
+                    {
+                        <div class="form-group">
+                            <label>Tên khách hàng</label>
+                            <input name="shipName" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Điện thoại</label>
+                            <input name="mobile" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Địa chỉ</label>
+                            <input name="address" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input name="email" class="form-control" />
+
+                        </div>
+                        <button type="submit" class="le-button">Xác nhận</button>
+                    }
+                </div>
+            </div>
+        </div>
+    </header>
+

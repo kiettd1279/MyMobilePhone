@@ -1,0 +1,62 @@
+﻿@model List<HoangHaMobile.Models.CartIterm>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section jsFooter{
+    <script src="/assets/Client/js/controller/cartController.js"></script>
+}
+<header>
+    <div class="container">
+        <div class="col-xs-12 col-md-12 items-holder no-margin">
+            @if (Model.Count > 0)
+            {
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td style="text-align:center;">Mã sản phẩm</td>
+                            <td style="text-align:center;">Tên SP</td>
+                            <td style="text-align:center;">Ảnh SP</td>
+                            <td style="text-align:center;">Số lượng</td>
+                            <td style="text-align:center;">Đơn giá</td>
+                            <td style="text-align:center;">Thành tiền</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td style="text-align:center;">@item.Product.ID</td>
+                                <td style="text-align:center;">@item.Product.Name</td>
+                                <td style="text-align:center;"><img src="@item.Product.Image" width="60" /></td>
+                                @*<td><input type="text" class="txtQuantity" data-id="@item.Product.ID" value="@item.Quantity" /></td>*@
+                                <td style="text-align:center;">
+                                    <div class="le-quantity">
+                                        <a class="minus minus-quanlity" href=" #reduce"></a>
+                                        <input type="text" class="txtQuantity" data-id="@item.Product.ID" value="@item.Quantity" />
+                                        <a class="plus plus-quanlity" href="#add"></a>
+
+                                    </div>
+                                </td>
+                                <td style="text-align:center;">@item.Product.Price.GetValueOrDefault(0).ToString("N0") VNĐ</td>
+                                <td style="text-align:center;">@((item.Product.Price.GetValueOrDefault(0) * item.Quantity).ToString("N0")) VNĐ</td>
+                                <td><a href="#" class="close-btn" data-id="@item.Product.ID"><b>X</b></a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <button id="btnContinue" class="le-button">Tiếp tục mua hàng</button>
+                <button id="btnUpdate" class="le-button">Cập nhật giỏ hàng</button>
+                <button id="btnDeleteAll" class="le-button">Xóa giỏ hàng</button>
+                <button id="btnPayment" class="le-button">Thanh toán</button>
+            }
+            else
+            {
+                <span class="alert alert-danger">Chưa có sản phẩm trong giỏ hàng</span>
+            }
+        </div>
+    </div>
+</header>
+

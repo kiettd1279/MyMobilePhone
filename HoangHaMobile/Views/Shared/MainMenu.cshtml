@@ -1,0 +1,19 @@
+﻿@model List<Model.EF.Menu>
+
+<nav id="top-megamenu-nav" class="megamenu-vertical animate-dropdown">
+    <div class="container">
+        <div class="yamm navbar">
+            <div class="collapse navbar-collapse" id="mc-horizontal-menu-collapse">
+                <ul class="nav navbar-nav">
+                    @foreach (var item in Model)
+                    {
+                        <li class="dropdown">
+                            <a href="@item.Link" target="@item.Target">@item.Text</a>
+                        </li>
+
+                    }
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.navbar -->
+    </div><!-- /.container -->
+</nav>

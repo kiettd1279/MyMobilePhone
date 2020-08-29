@@ -1,0 +1,32 @@
+﻿@model List<Model.EF.ProductCategory>
+
+<div class="head"><i class="fa fa-list"></i> Danh mục sản phẩm</div>
+<nav class="yamm megamenu-horizontal" role="navigation">
+    <ul class="nav">
+        @foreach (var item in Model.Where(x => x.ParentID == null))
+        {
+            var child = Model.Where(x => x.ParentID == item.ID);
+            var parentClass = child.Count() > 0 ? "class=dropdown-toggle data-toggle=dropdown" : "";
+            <li class="dropdown menu-item">
+                <a href="/san-pham/@item.MetaTitle-@item.ID" @parentClass>@item.Name</a>
+                @if (child.Count() > 0)
+                {
+                    <ul class="dropdown-menu">
+                        <li class="yamm-content">
+                            <div class="row">
+                                <div class="col-xs-12 col-lg-6">
+                                    <ul>
+                                        @foreach (var childItem in child)
+                                        {
+                                            <li><a href="/san-pham/@childItem.MetaTitle-@childItem.ID">@childItem.Name</a></li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                }
+            </li><!-- /.menu-item -->
+        }
+    </ul><!-- /.nav -->
+</nav><!-- /.megamenu-horizontal -->

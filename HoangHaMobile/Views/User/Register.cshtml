@@ -1,0 +1,125 @@
+﻿@model HoangHaMobile.Models.RegisterModel
+@{
+    ViewBag.Title = "Đăng ký";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section jsFooter{
+
+    <script src="/assets/Client/js/controller/userController.js"></script>
+}
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="field-row">
+                    @using (Html.BeginForm("Register", "User", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-horizontal">
+                            <h1>Đăng kí thành viên</h1>
+                            <hr />
+                            <div class="form-group">
+                                @Html.ValidationSummary(true)
+                                @if (ViewBag.Success != null)
+                                {
+                                    <div class="alert alert-success">@ViewBag.Success</div>
+                                }
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.UserName, new { @class = "control-label col-md-3" })
+                                <div class="col-md-9 input-lg">
+                                    @Html.TextBoxFor(model => model.UserName)
+                                    @Html.ValidationMessageFor(model => model.UserName)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Password, new { @class = "control-label col-md-3" })
+                                <div class="col-md-9 input-lg">
+                                    @Html.PasswordFor(model => model.Password)
+                                    @Html.ValidationMessageFor(model => model.Password)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ConfirmPassword, new { @class = "control-label col-md-3" })
+                                <div class="col-md-9 input-lg">
+                                    @Html.PasswordFor(model => model.ConfirmPassword)
+                                    @Html.ValidationMessageFor(model => model.ConfirmPassword)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-3" })
+                                <div class="col-md-9 input-lg">
+                                    @Html.TextBoxFor(model => model.Name)
+                                    @Html.ValidationMessageFor(model => model.Name)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Address, new { @class = "control-label col-md-3" })
+                                <div class="col-md-9 input-lg">
+                                    @Html.TextBoxFor(model => model.Address)
+                                    @Html.ValidationMessageFor(model => model.Address)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-3" })
+                                <div class="col-md-9 input-lg">
+                                    @Html.TextBoxFor(model => model.Email)
+                                    @Html.ValidationMessageFor(model => model.Email)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Phone, new { @class = "control-label col-md-3" })
+                                <div class="col-md-9 input-lg">
+                                    @Html.TextBoxFor(model => model.Phone)
+                                    @Html.ValidationMessageFor(model => model.Phone)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.TinhID, new { @class = "control-label col-md-3" })
+                                <div class="col-md-9 input-lg">
+                                    @Html.DropDownList("TinhID", new SelectList(new string[] { }), new { @class = "form-control", @id = "ddlTinh" })
+                                    @Html.ValidationMessageFor(model => model.TinhID)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.HuyenID, new { @class = "control-label col-md-3" })
+                                <div class="col-md-9 input-lg">
+                                    @Html.DropDownList("HuyenID", new SelectList(new string[] { }), new { @class = "form-control", @id = "ddlHuyen" })
+                                    @Html.ValidationMessageFor(model => model.HuyenID)
+                                </div>
+                            </div>
+
+                            <div class="buttons-holder">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Đăng ký" class="btn btn-default le-button huge" />
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-horizontal">
+                    <h1 class="semi-bold">Đăng kí ngay hôm nay, bạn có thể :</h1>
+                    <hr />
+                    <ul class="list-unstyled list-benefits">
+                        <li><i class="fa fa-check primary-color"></i> Thanh toán hóa đơn nhanh chóng</li>
+                        <li><i class="fa fa-check primary-color"></i> Theo dõi đơn đặt hàng dễ dàng</li>
+                        <li><i class="fa fa-check primary-color"></i> Lưu giữ các giao dịch của bạn</li>
+                    </ul>
+
+                </div>
+
+            </div><!-- /.col -->
+        </div>
+    </div>
+</header>
+

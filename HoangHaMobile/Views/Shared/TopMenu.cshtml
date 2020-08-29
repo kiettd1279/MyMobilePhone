@@ -1,0 +1,25 @@
+﻿@model List<Model.EF.Menu>
+@using HoangHaMobile.Common
+<nav class="top-bar animate-dropdown">
+    <div class="container">
+        @{
+            var session = (UserLogin)Session[HoangHaMobile.Common.CommonConstants.USER_SESSION];
+        }
+        @if (session == null)
+        {
+            <ul class="right">
+                @foreach (var item in Model)
+                {
+                    <li><a href="@item.Link" target="@item.Target"><h2 style="font-size:15px">@item.Text</h2></a></li>
+                }
+            </ul>
+        }
+        else
+        {
+            <ul class="right">
+                <li>Xin chào: @session.UserName</li>
+                <li>@Html.ActionLink("Thoát", "Logout", "User")</li>
+            </ul>
+        }
+    </div><!-- /.container -->
+</nav>

@@ -1,0 +1,65 @@
+E:\ASP MVC\Model\bin\Debug\Model.dll.config
+E:\ASP MVC\Model\bin\Debug\Model.dll
+E:\ASP MVC\Model\bin\Debug\Model.pdb
+E:\ASP MVC\Model\bin\Debug\Common.dll
+E:\ASP MVC\Model\bin\Debug\EntityFramework.dll
+E:\ASP MVC\Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\ASP MVC\Model\bin\Debug\Common.pdb
+E:\ASP MVC\Model\bin\Debug\EntityFramework.xml
+E:\ASP MVC\Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\ASP MVC\Model\obj\Debug\Model.csprojAssemblyReference.cache
+E:\ASP MVC\Model\obj\Debug\Model.csproj.CopyComplete
+E:\ASP MVC\Model\obj\Debug\Model.dll
+E:\ASP MVC\Model\obj\Debug\Model.pdb
+E:\ASP MVC DA\Model\bin\Debug\Model.dll.config
+E:\ASP MVC DA\Model\bin\Debug\Model.dll
+E:\ASP MVC DA\Model\bin\Debug\Model.pdb
+E:\ASP MVC DA\Model\bin\Debug\Common.dll
+E:\ASP MVC DA\Model\bin\Debug\EntityFramework.dll
+E:\ASP MVC DA\Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\ASP MVC DA\Model\bin\Debug\Common.pdb
+E:\ASP MVC DA\Model\bin\Debug\EntityFramework.xml
+E:\ASP MVC DA\Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\ASP MVC DA\Model\obj\Debug\Model.csprojAssemblyReference.cache
+E:\ASP MVC DA\Model\obj\Debug\Model.csproj.CopyComplete
+E:\ASP MVC DA\Model\obj\Debug\Model.dll
+E:\ASP MVC DA\Model\obj\Debug\Model.pdb
+E:\ASP MVC DA\Model\bin\Debug\PagedList.dll
+E:\ASP MVC DA\Model\bin\Debug\PagedList.Mvc.dll
+E:\ASP MVC DA\Model\bin\Debug\PagedList.xml
+E:\ASP MVC DA\Model\bin\Debug\PagedList.Mvc.xml
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Model\bin\Debug\Model.dll.config
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Model\bin\Debug\Model.dll
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Model\bin\Debug\Model.pdb
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Model\bin\Debug\Common.dll
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Model\bin\Debug\EntityFramework.dll
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Model\bin\Debug\PagedList.dll
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Model\bin\Debug\PagedList.Mvc.dll
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Model\bin\Debug\Common.pdb
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Model\bin\Debug\EntityFramework.xml
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Model\bin\Debug\PagedList.xml
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Model\bin\Debug\PagedList.Mvc.xml
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Model\obj\Debug\Model.csprojAssemblyReference.cache
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Model\obj\Debug\Model.csproj.CopyComplete
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Model\obj\Debug\Model.dll
+E:\DA_CHUYENNGANH_IT_2020\ASP MVC DA\Model\obj\Debug\Model.pdb
+D:\ASP MVC\Database\ASP MVC DA\Model\bin\Debug\Model.dll.config
+D:\ASP MVC\Database\ASP MVC DA\Model\bin\Debug\Model.dll
+D:\ASP MVC\Database\ASP MVC DA\Model\bin\Debug\Model.pdb
+D:\ASP MVC\Database\ASP MVC DA\Model\bin\Debug\Common.dll
+D:\ASP MVC\Database\ASP MVC DA\Model\bin\Debug\EntityFramework.dll
+D:\ASP MVC\Database\ASP MVC DA\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\ASP MVC\Database\ASP MVC DA\Model\bin\Debug\PagedList.dll
+D:\ASP MVC\Database\ASP MVC DA\Model\bin\Debug\PagedList.Mvc.dll
+D:\ASP MVC\Database\ASP MVC DA\Model\bin\Debug\Common.pdb
+D:\ASP MVC\Database\ASP MVC DA\Model\bin\Debug\EntityFramework.xml
+D:\ASP MVC\Database\ASP MVC DA\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\ASP MVC\Database\ASP MVC DA\Model\bin\Debug\PagedList.xml
+D:\ASP MVC\Database\ASP MVC DA\Model\bin\Debug\PagedList.Mvc.xml
+D:\ASP MVC\Database\ASP MVC DA\Model\obj\Debug\Model.csprojAssemblyReference.cache
+D:\ASP MVC\Database\ASP MVC DA\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\ASP MVC\Database\ASP MVC DA\Model\obj\Debug\Model.csproj.CopyComplete
+D:\ASP MVC\Database\ASP MVC DA\Model\obj\Debug\Model.dll
+D:\ASP MVC\Database\ASP MVC DA\Model\obj\Debug\Model.pdb
