@@ -34,10 +34,12 @@ namespace HoangHaMobile.Areas.Admin.Controllers
         public ActionResult Create(Product model)
         {
             //
-            model.CreatedDate = DateTime.Now;
+        model.CreatedDate = DateTime.Now;
 
             var dao = new OnlineShopDbContext();
+
             dao.Products.Add(model);
+
             int result = dao.SaveChanges();
 
             if (result > 0)

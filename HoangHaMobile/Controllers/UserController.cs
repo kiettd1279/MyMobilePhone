@@ -82,6 +82,7 @@ namespace HoangHaMobile.Controllers
                 {
                     var user = new User();
                     user.Name = model.Name;
+                    user.UserName = model.UserName;
                     user.Password = model.Password;
                     user.Phone = model.Phone;
                     user.Email = model.Email;
